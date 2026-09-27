@@ -12,40 +12,61 @@ const fieldClass =
   "mt-2 mb-5 h-12 w-full rounded-xl border border-cream/15 bg-cream/5 px-3 text-sm text-cream outline-none focus-visible:border-copper";
 const labelClass = "text-xs tracking-[0.14em] text-cream/50 uppercase";
 
+function consultationMailto({
+  name,
+  email,
+  phone,
+  interest,
+  note,
+}: {
+  name: string;
+  email: string;
+  phone: string;
+  interest: string;
+  note: string;
+}) {
+  const subject = `Consultation: ${interest} — ${name}`;
+  const body = [
+    `Name: ${name}`,
+    `Email: ${email}`,
+    `Phone: ${phone}`,
+    `Interest: ${interest}`,
+    "",
+    note,
+  ].join("\n");
+
+  return `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 export function Contact() {
   const reduce = useReducedMotion();
   const { t } = useLocale();
   const [sent, setSent] = useState(false);
-  const [sending, setSending] = useState(false);
   const [error, setError] = useState(false);
 
-  async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+  function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const form = event.currentTarget;
-    const data = new FormData(form);
+    const data = new FormData(event.currentTarget);
     const name = String(data.get("name") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
     const phone = String(data.get("phone") ?? "").trim();
     const interest = String(data.get("interest") ?? "").trim();
     const note = String(data.get("note") ?? "").trim();
 
-    setSending(true);
-    setError(false);
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, interest, note }),
-      });
-
-      if (!response.ok) throw new Error("send failed");
-      setSent(true);
-    } catch {
+    if (!name || !email || !phone || !note || !site.email) {
       setError(true);
-    } finally {
-      setSending(false);
+      return;
     }
+
+    setError(false);
+    window.location.href = consultationMailto({
+      name,
+      email,
+      phone,
+      interest,
+      note,
+    });
+    setSent(true);
   }
 
   return (
@@ -152,12 +173,11 @@ export function Contact() {
                 ) : null}
                 <motion.button
                   type="submit"
-                  disabled={sending}
-                  className="cta-copper mt-6 w-full disabled:cursor-wait disabled:opacity-70"
-                  whileHover={reduce || sending ? undefined : { y: -2 }}
+                  className="cta-copper mt-6 w-full"
+                  whileHover={reduce ? undefined : { y: -2 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  {sending ? t.contact.sending : t.contact.submit}
+                  {t.contact.submit}
                 </motion.button>
               </form>
             )}
