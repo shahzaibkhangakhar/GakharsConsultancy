@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import { Reveal } from "@/components/motion/reveal";
 import { useLocale } from "@/components/i18n/locale-provider";
+import { SocialLinks } from "@/components/layout/social-links";
 import { images, site } from "@/lib/site";
 
 const fieldClass =
@@ -92,13 +92,7 @@ export function Contact() {
               {t.contact.title}
             </h2>
             <p className="mt-5 max-w-md text-cream/70">{t.contact.text}</p>
-            <Link
-              href={site.social.linkedin}
-              target="_blank"
-              className="mt-6 inline-flex text-sm font-semibold text-cream underline decoration-copper underline-offset-4"
-            >
-              {t.contact.linkedin}
-            </Link>
+            <SocialLinks className="mt-6" />
           </Reveal>
 
           <div className="mt-10">

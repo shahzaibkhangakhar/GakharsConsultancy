@@ -85,8 +85,14 @@ type Copy = {
     interests: string[];
     imageAlt: string;
   };
+  social: {
+    linkedin: string;
+    instagram: string;
+    facebook: string;
+  };
   footer: {
     line: string;
+    firma: string;
   };
   impressum: {
     kicker: string;
@@ -122,7 +128,7 @@ export const messages: Record<Locale, Copy> = {
       language: "Change language",
     },
     hero: {
-      kicker: "Consultation · Kaiserslautern",
+      kicker: "Consultation · Germany",
       title: "Clear guidance for Germany.",
       text: "I sit with you, pick one path, and turn it into the next application, interview, or Ausbildung step. Founder of Europe Chalo.",
       book: "Book a consultation",
@@ -143,8 +149,7 @@ export const messages: Record<Locale, Copy> = {
       "German Lebenslauf",
       "Ausbildung contracts",
       "Work-permit timing",
-      "Kaiserslautern based",
-      "Registered in Germany",
+      "Registered Firma in Germany",
       "South Asia corridor",
     ],
     services: {
@@ -196,8 +201,8 @@ export const messages: Record<Locale, Copy> = {
     },
     about: {
       kicker: "About",
-      p1: "Consultant in Kaiserslautern for people who want to study, work, or train in Germany.",
-      p2: "Founder of Europe Chalo. Sessions stay 1:1—map the goal, pick one path, leave with the next action.",
+      p1: "As a Germany-based Consultant and Founder of Europe Chalo, I specialize in providing strategic guidance for individuals seeking to study, work, or train in Germany. Leveraging my technical background as a Software Engineer and my Master's studies in Computer Science at RPTU Kaiserslautern, I apply a highly analytical, problem-solving approach to career planning.",
+      p2: "Through focused 1:1 sessions, we systematically map your objectives, identify the most viable path, and ensure you leave with a definitive next action. My comprehensive experience across the German academic and professional sectors allows me to deliver customized, results-driven consulting tailored to your unique journey.",
       imageAlt: "Portrait of Shahzaib Gakhar",
     },
     contact: {
@@ -222,8 +227,14 @@ export const messages: Record<Locale, Copy> = {
       ],
       imageAlt: "Students talking on a European campus",
     },
+    social: {
+      linkedin: "LinkedIn",
+      instagram: "Instagram",
+      facebook: "Facebook",
+    },
     footer: {
       line: "Consultation",
+      firma: "Registered Firma in Germany",
     },
     impressum: {
       kicker: "Legal",
@@ -257,7 +268,7 @@ export const messages: Record<Locale, Copy> = {
       language: "Sprache ändern",
     },
     hero: {
-      kicker: "Beratung · Kaiserslautern",
+      kicker: "Beratung · Deutschland",
       title: "Klare Orientierung für Deutschland.",
       text: "Wir sitzen zusammen, wählen einen Weg und machen den nächsten Antrag, das nächste Gespräch oder den nächsten Ausbildungsschritt. Gründer von Europe Chalo.",
       book: "Beratung buchen",
@@ -278,8 +289,7 @@ export const messages: Record<Locale, Copy> = {
       "Deutscher Lebenslauf",
       "Ausbildungsverträge",
       "Arbeitserlaubnis-Zeitplan",
-      "Sitz in Kaiserslautern",
-      "In Deutschland registriert",
+      "Eingetragene Firma in Deutschland",
       "Südasien-Korridor",
     ],
     services: {
@@ -331,8 +341,8 @@ export const messages: Record<Locale, Copy> = {
     },
     about: {
       kicker: "Über mich",
-      p1: "Berater in Kaiserslautern für Menschen, die in Deutschland studieren, arbeiten oder eine Ausbildung machen wollen.",
-      p2: "Gründer von Europe Chalo. Sitzungen bleiben 1:1—Ziel klären, einen Weg wählen, mit der nächsten Aktion gehen.",
+      p1: "Als in Deutschland ansässiger Berater und Gründer von Europe Chalo begleite ich Menschen, die in Deutschland studieren, arbeiten oder eine Ausbildung machen wollen. Mit meinem technischen Hintergrund als Softwareingenieur und meinem Masterstudium der Informatik an der RPTU Kaiserslautern gehe ich Karriereplanung analytisch und lösungsorientiert an.",
+      p2: "In fokussierten 1:1-Sitzungen klären wir Ihre Ziele, wählen den tragfähigsten Weg und Sie gehen mit einer klaren nächsten Aktion. Meine Erfahrung in der deutschen Hochschul- und Berufswelt ermöglicht eine maßgeschneiderte, ergebnisorientierte Beratung für Ihren individuellen Weg.",
       imageAlt: "Porträt von Shahzaib Gakhar",
     },
     contact: {
@@ -357,8 +367,14 @@ export const messages: Record<Locale, Copy> = {
       ],
       imageAlt: "Studierende im Gespräch auf einem europäischen Campus",
     },
+    social: {
+      linkedin: "LinkedIn",
+      instagram: "Instagram",
+      facebook: "Facebook",
+    },
     footer: {
       line: "Beratung",
+      firma: "Eingetragene Firma in Deutschland",
     },
     impressum: {
       kicker: "Rechtliches",
@@ -392,7 +408,7 @@ export const messages: Record<Locale, Copy> = {
       language: "زبان تبدیل کریں",
     },
     hero: {
-      kicker: "مشاورت · کایزرسلاترن",
+      kicker: "مشاورت · جرمنی",
       title: "جرمنی کے لیے واضح رہنمائی۔",
       text: "میں آپ کے ساتھ بیٹھتا ہوں، ایک راستہ چنتا ہوں، اور اسے اگلی درخواست، انٹرویو یا آسبلڈونگ کے قدم میں بدل دیتا ہوں۔ یورپ چلو کے بانی۔",
       book: "مشاورت بک کریں",
@@ -413,8 +429,7 @@ export const messages: Record<Locale, Copy> = {
       "جرمن لیبینزلاؤف",
       "آسبلڈونگ معاہدے",
       "ورک پرمٹ کا وقت",
-      "کایزرسلاترن سے",
-      "جرمنی میں رجسٹرڈ",
+      "جرمنی میں رجسٹرڈ فرم",
       "جنوبی ایشیا کوریڈور",
     ],
     services: {
@@ -466,8 +481,8 @@ export const messages: Record<Locale, Copy> = {
     },
     about: {
       kicker: "تعارف",
-      p1: "کایزرسلاترن میں مشیر، ان لوگوں کے لیے جو جرمنی میں پڑھنا، کام کرنا یا تربیت کرنا چاہتے ہیں۔",
-      p2: "یورپ چلو کے بانی۔ سیشن ایک سے ایک رہتے ہیں—ہدف طے کریں، ایک راستہ چنیں، اگلا عمل لے کر جائیں۔",
+      p1: "جرمنی میں مقیم مشیر اور یورپ چلو کے بانی کے طور پر میں ان لوگوں کو رہنمائی دیتا ہوں جو جرمنی میں پڑھنا، کام کرنا یا تربیت کرنا چاہتے ہیں۔ سافٹ ویئر انجینئر کے طور پر اپنے فنی پس منظر اور RPTU Kaiserslautern میں کمپیوٹر سائنس کی ماسٹرز تعلیم سے میں کیریئر کی منصوبہ بندی کو تجزیاتی اور مسئلہ حل کرنے والے انداز میں کرتا ہوں۔",
+      p2: "مرکوز ایک سے ایک سیشن میں ہم آپ کے اہداف طے کرتے ہیں، سب سے بہتر راستہ چنتے ہیں، اور آپ کو ایک واضح اگلا عمل دے کر رخصت کرتے ہیں۔ جرمن تعلیمی اور پیشہ ورانہ شعبوں کا میرا تجربہ آپ کے سفر کے مطابق نتائج پر مبنی مشاورت ممکن بناتا ہے۔",
       imageAlt: "شہزیب گکھڑ کی تصویر",
     },
     contact: {
@@ -487,8 +502,14 @@ export const messages: Record<Locale, Copy> = {
       interests: ["یونیورسٹی داخلہ", "ملازمت", "آسبلڈونگ", "زبان اور آمد"],
       imageAlt: "یورپی کیمپس پر بات کرتے طلبہ",
     },
+    social: {
+      linkedin: "لنکڈ اِن",
+      instagram: "انسٹاگرام",
+      facebook: "فیس بک",
+    },
     footer: {
       line: "مشاورت",
+      firma: "جرمنی میں رجسٹرڈ فرم",
     },
     impressum: {
       kicker: "قانونی",
@@ -522,7 +543,7 @@ export const messages: Record<Locale, Copy> = {
       language: "भाषा बदलें",
     },
     hero: {
-      kicker: "परामर्श · कैज़र्सलाउटरन",
+      kicker: "परामर्श · जर्मनी",
       title: "जर्मनी के लिए स्पष्ट मार्गदर्शन।",
       text: "मैं आपके साथ बैठता हूँ, एक रास्ता चुनता हूँ, और उसे अगली अर्जी, इंटरव्यू या आउसबिल्ड़ुंग के कदम में बदलता हूँ। यूरोप चलो के संस्थापक।",
       book: "परामर्श बुक करें",
@@ -543,8 +564,7 @@ export const messages: Record<Locale, Copy> = {
       "जर्मन लेबेन्स्लाउफ़",
       "आउसबिल्ड़ुंग अनुबंध",
       "वर्क परमिट का समय",
-      "कैज़र्सलाउटरन से",
-      "जर्मनी में पंजीकृत",
+      "जर्मनी में पंजीकृत फ़र्मा",
       "दक्षिण एशिया गलियारा",
     ],
     services: {
@@ -596,8 +616,8 @@ export const messages: Record<Locale, Copy> = {
     },
     about: {
       kicker: "परिचय",
-      p1: "कैज़र्सलाउटरन में सलाहकार, उन लोगों के लिए जो जर्मनी में पढ़ना, काम करना या प्रशिक्षण लेना चाहते हैं।",
-      p2: "यूरोप चलो के संस्थापक। सत्र एक-से-एक रहते हैं—लक्ष्य तय करें, एक रास्ता चुनें, अगला काम लेकर जाएँ।",
+      p1: "जर्मनी में स्थित सलाहकार और यूरोप चलो के संस्थापक के रूप में मैं उन लोगों को मार्गदर्शन देता हूँ जो जर्मनी में पढ़ना, काम करना या प्रशिक्षण लेना चाहते हैं। सॉफ़्टवेयर इंजीनियर के तकनीकी अनुभव और RPTU Kaiserslautern में कंप्यूटर विज्ञान की मास्टर्स पढ़ाई से मैं करियर योजना को विश्लेषणात्मक और समस्या-समाधान वाले तरीके से देखता हूँ।",
+      p2: "केंद्रित एक-से-एक सत्र में हम आपके लक्ष्य तय करते हैं, सबसे व्यवहार्य रास्ता चुनते हैं, और आप एक स्पष्ट अगला कदम लेकर जाते हैं। जर्मन शैक्षणिक और पेशेवर क्षेत्रों का मेरा अनुभव आपकी यात्रा के अनुरूप परिणाम-केंद्रित परामर्श देता है।",
       imageAlt: "शाहज़ेब गक्खर का चित्र",
     },
     contact: {
@@ -617,8 +637,14 @@ export const messages: Record<Locale, Copy> = {
       interests: ["विश्वविद्यालय प्रवेश", "नौकरी", "आउसबिल्ड़ुंग", "भाषा और आगमन"],
       imageAlt: "यूरोपीय कैंपस पर बात करते विद्यार्थी",
     },
+    social: {
+      linkedin: "लिंक्डइन",
+      instagram: "इंस्टाग्राम",
+      facebook: "फेसबुक",
+    },
     footer: {
       line: "परामर्श",
+      firma: "जर्मनी में पंजीकृत फ़र्मा",
     },
     impressum: {
       kicker: "कानूनी",

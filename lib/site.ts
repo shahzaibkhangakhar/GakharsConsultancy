@@ -1,9 +1,11 @@
 export const site = {
   name: "Shahzaib Gakhar",
-  location: "Kaiserslautern, Germany",
+  location: "Germany",
   email: "gakharconsultancy@gmail.com",
   social: {
     linkedin: "https://www.linkedin.com/in/shahzaibgakhar",
+    instagram: "https://www.instagram.com/shahzaib_gakhar/",
+    facebook: "https://www.facebook.com/itsgakhar/",
   },
 } as const;
 

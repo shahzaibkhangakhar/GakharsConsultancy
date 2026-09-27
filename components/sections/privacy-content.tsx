@@ -17,8 +17,9 @@ export function PrivacyContent() {
       </h1>
       <div className="mt-10 space-y-6 text-sm leading-relaxed text-muted-foreground">
         <p>{t.privacy.p1}</p>
+        <p>{t.privacy.p2}</p>
         <p>
-          {t.privacy.p2} {site.name}, {site.location}.
+          {site.name}. {t.footer.firma}.
         </p>
       </div>
       <Link href="/" className="mt-12 inline-flex cursor-pointer text-sm text-copper">

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useLocale } from "@/components/i18n/locale-provider";
+import { SocialLinks } from "@/components/layout/social-links";
 import { site } from "@/lib/site";
 
 export function ImpressumContent() {
@@ -19,18 +20,14 @@ export function ImpressumContent() {
         <p>
           {site.name}
           <br />
-          {site.location}
+          {t.footer.firma}
           <br />
           <a href={`mailto:${site.email}`} className="text-copper underline">
             {site.email}
           </a>
         </p>
-        <p>
-          {t.impressum.body}{" "}
-          <a href={site.social.linkedin} className="text-copper underline">
-            {t.contact.linkedin}
-          </a>
-        </p>
+        <p>{t.impressum.body}</p>
+        <SocialLinks tone="copper" />
       </div>
       <Link href="/" className="mt-12 inline-flex cursor-pointer text-sm text-copper">
         {t.impressum.back}
