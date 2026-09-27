@@ -20,6 +20,10 @@ export function ImpressumContent() {
           {site.name}
           <br />
           {site.location}
+          <br />
+          <a href={`mailto:${site.email}`} className="text-copper underline">
+            {site.email}
+          </a>
         </p>
         <p>
           {t.impressum.body}{" "}

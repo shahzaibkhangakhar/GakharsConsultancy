@@ -14,22 +14,23 @@ export function About() {
     <section id="about" className="scroll-mt-20 py-20 md:py-28">
       <div className="site-wrap grid items-center gap-12 lg:grid-cols-12">
         <motion.div
-          className="relative h-[28rem] overflow-hidden rounded-3xl lg:col-span-6"
+          className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-3xl lg:col-span-5 lg:max-w-none"
           initial={reduce ? false : { opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <Image
-            src={images.city}
+            src={images.portrait}
             alt={t.about.imageAlt}
             fill
-            className="object-cover"
-            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover object-[center_15%]"
+            sizes="(min-width: 1024px) 40vw, 100vw"
+            priority={false}
           />
         </motion.div>
 
-        <Reveal className="lg:col-span-6">
+        <Reveal className="lg:col-span-7">
           <p className="text-xs font-semibold tracking-[0.28em] text-copper uppercase">
             {t.about.kicker}
           </p>

@@ -1,7 +1,7 @@
 export const site = {
   name: "Shahzaib Gakhar",
   location: "Kaiserslautern, Germany",
-  email: "",
+  email: "gakharconsultancy@gmail.com",
   social: {
     linkedin: "https://www.linkedin.com/in/shahzaibgakhar",
   },
@@ -29,6 +29,7 @@ export const images = {
     "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1400&q=80",
   library:
     "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1400&q=80",
+  portrait: "/shahzaib-gakhar.jpg",
 } as const;
 
 export const stats = [
